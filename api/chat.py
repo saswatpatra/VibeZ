@@ -1,8 +1,9 @@
 import json
+import os
 from groq import Groq
 
-# Your API key
-api_key = "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"
+# Retrieve API key from environment variable, with fallback (for local testing, if needed)
+api_key = os.environ.get("GROQ_API_KEY", "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")
 client = Groq(api_key=api_key)
 
 # Custom prompt for VibeZ
